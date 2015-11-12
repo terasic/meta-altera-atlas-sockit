@@ -1,4 +1,7 @@
-require recipes-images/angstrom/extended-console-image.bb
+require recipes-images/angstrom/console-image.bb
+
+DEPENDS += "bash perl gcc i2c-tools \
+"
 
 IMAGE_INSTALL += " \
 	kernel-modules \
@@ -19,6 +22,9 @@ IMAGE_INSTALL += " \
         iproute2 \
 	lighttpd \
         lighttpd-module-cgi \
+	bash perl gcc i2c-tools ethtool \
+	iperf net-tools nfs-utils-client \
+	portmap tcpdump ltp  \
 	atlas-soc-lighttpd-conf \
 	atlas-soc-101 \
 	atlas-soc-usb-gadget \

@@ -8,7 +8,7 @@ SRC_URI_append += " \
 			"
 # Add patches
 SRC_URI_append += " \
-			files://${KBRANCH}/0001-altera_gpio_get-bit-mask-error-in-gpio-altera.c.patch \
-			files://${KBRANCH}/0001-Add-devicetree-for-de0-sockit.patch \
-			files://${KBRANCH}/0002-Add-FPGA-devicetree-content-for-de0-sockit.patch \
+			file://${KBRANCH}/0001-altera_gpio_get-bit-mask-error-in-gpio-altera.c.patch \
+			file://${KBRANCH}/0001-Add-devicetree-for-de0-sockit.patch \
+			file://${KBRANCH}/0002-Add-FPGA-devicetree-content-for-de0-sockit.patch \
 			"

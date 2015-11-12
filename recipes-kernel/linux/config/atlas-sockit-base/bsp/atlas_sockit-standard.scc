@@ -1,0 +1,9 @@
+define KMACHINE atlas_sockit
+define KTYPE standard
+define KARCH arm
+
+include bsp/include/cyclone5_arria5_arria10.scc
+
+# Atlas configs
+include features/atlas_sockit.scc
+

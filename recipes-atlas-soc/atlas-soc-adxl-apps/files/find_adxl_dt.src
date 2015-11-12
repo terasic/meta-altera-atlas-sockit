@@ -1,0 +1,15 @@
+function find_adxl_dt ()
+{
+    for NEXT in $(find -L /proc/device-tree -name "compatible" | sort);
+    do
+        cat ${NEXT} | grep "adxl34x" > /dev/null && {
+            ADXL_DIRNAME="$(dirname ${NEXT})";
+            echo ${ADXL_DIRNAME};
+            echo -e "\tcompatible = '$(cat ${ADXL_DIRNAME}/compatible)'";
+            echo -e "\t      name = '$(cat ${ADXL_DIRNAME}/name)'";
+            REG_HEX="$(hexdump -v -e '"0x"' -e '4/1 "%02x"' "${ADXL_DIRNAME}/reg")";
+            echo -e "\t       reg = '${REG_HEX}'"
+        };
+    done
+}
+

@@ -1,0 +1,8 @@
+[Unit]
+Description=Atlas SoC fftsw init
+
+[Service]
+ExecStart=/examples/fft/bin/setup_target_fft_env.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -11,9 +11,10 @@ IMAGE_INSTALL += " \
         packagegroup-core-x11-xserver \
         xserver-nodm-init \
         xserver-common \
-        gimp abiword gedit midori epiphany \
+        gimp abiword gedit epiphany \
         imagemagick \
 	atlas-soc-x11vnc \
+	chromium \
 "
 
 export IMAGE_BASENAME = "atlas-soc-image"
